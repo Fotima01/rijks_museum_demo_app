@@ -24,5 +24,5 @@ class CollectionApiFailure with _$CollectionApiFailure implements Exception {
   const factory CollectionApiFailure({
     required String debugMessage,
     String? stackTrace,
-  }) = _PermissionFailure;
+  }) = _CollectionApiFailure;
 }

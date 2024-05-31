@@ -5,11 +5,11 @@ part 'result_models.freezed.dart';
 class Result<T, E extends Exception> with _$Result<T, E> {
   const Result._();
 
-  const factory Result.success(T data) = _Success;
+  const factory Result.success(T data) = Success;
 
-  const factory Result.failure(E exception) = _Failure;
+  const factory Result.failure(E exception) = Failure;
 
-  bool get isSuccess => this is _Success;
+  bool get isSuccess => this is Success;
 
-  bool get isFailure => this is _Failure;
+  bool get isFailure => this is Failure;
 }

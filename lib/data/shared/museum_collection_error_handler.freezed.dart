@@ -64,22 +64,22 @@ class _$CollectionApiFailureCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_PermissionFailureCopyWith<$Res>
+abstract class _$$_CollectionApiFailureCopyWith<$Res>
     implements $CollectionApiFailureCopyWith<$Res> {
-  factory _$$_PermissionFailureCopyWith(_$_PermissionFailure value,
-          $Res Function(_$_PermissionFailure) then) =
-      __$$_PermissionFailureCopyWithImpl<$Res>;
+  factory _$$_CollectionApiFailureCopyWith(_$_CollectionApiFailure value,
+          $Res Function(_$_CollectionApiFailure) then) =
+      __$$_CollectionApiFailureCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String debugMessage, String? stackTrace});
 }
 
 /// @nodoc
-class __$$_PermissionFailureCopyWithImpl<$Res>
-    extends _$CollectionApiFailureCopyWithImpl<$Res, _$_PermissionFailure>
-    implements _$$_PermissionFailureCopyWith<$Res> {
-  __$$_PermissionFailureCopyWithImpl(
-      _$_PermissionFailure _value, $Res Function(_$_PermissionFailure) _then)
+class __$$_CollectionApiFailureCopyWithImpl<$Res>
+    extends _$CollectionApiFailureCopyWithImpl<$Res, _$_CollectionApiFailure>
+    implements _$$_CollectionApiFailureCopyWith<$Res> {
+  __$$_CollectionApiFailureCopyWithImpl(_$_CollectionApiFailure _value,
+      $Res Function(_$_CollectionApiFailure) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -88,7 +88,7 @@ class __$$_PermissionFailureCopyWithImpl<$Res>
     Object? debugMessage = null,
     Object? stackTrace = freezed,
   }) {
-    return _then(_$_PermissionFailure(
+    return _then(_$_CollectionApiFailure(
       debugMessage: null == debugMessage
           ? _value.debugMessage
           : debugMessage // ignore: cast_nullable_to_non_nullable
@@ -103,8 +103,8 @@ class __$$_PermissionFailureCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_PermissionFailure implements _PermissionFailure {
-  const _$_PermissionFailure({required this.debugMessage, this.stackTrace});
+class _$_CollectionApiFailure implements _CollectionApiFailure {
+  const _$_CollectionApiFailure({required this.debugMessage, this.stackTrace});
 
   @override
   final String debugMessage;
@@ -120,7 +120,7 @@ class _$_PermissionFailure implements _PermissionFailure {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PermissionFailure &&
+            other is _$_CollectionApiFailure &&
             (identical(other.debugMessage, debugMessage) ||
                 other.debugMessage == debugMessage) &&
             (identical(other.stackTrace, stackTrace) ||
@@ -133,15 +133,15 @@ class _$_PermissionFailure implements _PermissionFailure {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PermissionFailureCopyWith<_$_PermissionFailure> get copyWith =>
-      __$$_PermissionFailureCopyWithImpl<_$_PermissionFailure>(
+  _$$_CollectionApiFailureCopyWith<_$_CollectionApiFailure> get copyWith =>
+      __$$_CollectionApiFailureCopyWithImpl<_$_CollectionApiFailure>(
           this, _$identity);
 }
 
-abstract class _PermissionFailure implements CollectionApiFailure {
-  const factory _PermissionFailure(
+abstract class _CollectionApiFailure implements CollectionApiFailure {
+  const factory _CollectionApiFailure(
       {required final String debugMessage,
-      final String? stackTrace}) = _$_PermissionFailure;
+      final String? stackTrace}) = _$_CollectionApiFailure;
 
   @override
   String get debugMessage;
@@ -149,6 +149,6 @@ abstract class _PermissionFailure implements CollectionApiFailure {
   String? get stackTrace;
   @override
   @JsonKey(ignore: true)
-  _$$_PermissionFailureCopyWith<_$_PermissionFailure> get copyWith =>
+  _$$_CollectionApiFailureCopyWith<_$_CollectionApiFailure> get copyWith =>
       throw _privateConstructorUsedError;
 }

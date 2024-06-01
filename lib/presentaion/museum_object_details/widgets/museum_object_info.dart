@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:rijks_museum_demo_app/constants/colors.dart';
-import 'package:rijks_museum_demo_app/domain/models/museum_object_domain_model.dart';
+import 'package:rijks_museum_demo_app/presentaion/museum_object_details/models/art_object_state_model.dart';
 
 class MuseumObjectInfo extends StatelessWidget {
   const MuseumObjectInfo({required this.artObject, super.key});
 
-  final ArtObjectDomainModel artObject;
+  final ArtObjectStateModel artObject;
 
   @override
   Widget build(BuildContext context) {

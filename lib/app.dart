@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:rijks_museum_demo_app/application/di/dependency_injector.dart';
 import 'package:rijks_museum_demo_app/application/route/go_navigation.dart';
 import 'package:rijks_museum_demo_app/application/theme/theme.dart';
 import 'package:rijks_museum_demo_app/constants/routes/routes.dart';
-import 'package:rijks_museum_demo_app/presentaion/collection/bloc/collection_page_bloc.dart';
-import 'package:rijks_museum_demo_app/presentaion/museum_object_details/cubit/museum_object_details_cubit.dart';
 import 'package:rijks_museum_demo_app/presentaion/shared/error/error_page_content.dart';
 
 class App extends StatefulWidget {
@@ -35,20 +32,14 @@ class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
+      title: 'Museum app',
       routerDelegate: _navigation.router.routerDelegate,
       routeInformationParser: _navigation.router.routeInformationParser,
       routeInformationProvider: _navigation.router.routeInformationProvider,
       theme: AppTheme.light,
       darkTheme: AppTheme.dark,
       builder: (context, child) {
-        return MultiBlocProvider(
-          providers: [
-            BlocProvider(create: (context) => injector<CollectionPageBloc>()),
-            BlocProvider(
-                create: (context) => injector<MuseumObjectDetailsCubit>())
-          ],
-          child: child ?? const SizedBox(),
-        );
+        return child ?? const SizedBox();
       },
     );
   }

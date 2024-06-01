@@ -1,8 +1,8 @@
 import 'package:rijks_museum_demo_app/data/models/museum_object_response_data_model/museum_object_response_data_model.dart';
-import 'package:rijks_museum_demo_app/domain/mappers/art_object_dating_domain_model_mapper.dart';
-import 'package:rijks_museum_demo_app/domain/mappers/art_object_image_domain_model_mapper.dart';
-import 'package:rijks_museum_demo_app/domain/mappers/art_object_label_domain_model_mapper.dart';
-import 'package:rijks_museum_demo_app/domain/mappers/object_acquisition_domain_model_mapper.dart';
+import 'package:rijks_museum_demo_app/data/mappers/art_object_dating_domain_model_mapper.dart';
+import 'package:rijks_museum_demo_app/data/mappers/art_object_image_domain_model_mapper.dart';
+import 'package:rijks_museum_demo_app/data/mappers/art_object_label_domain_model_mapper.dart';
+import 'package:rijks_museum_demo_app/data/mappers/object_acquisition_domain_model_mapper.dart';
 import 'package:rijks_museum_demo_app/domain/models/museum_object_domain_model.dart';
 
 class ArtObjectDomainModelMapper {

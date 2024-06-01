@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:rijks_museum_demo_app/data/models/museum_object_response_data_model/museum_object_response_data_model.dart';
-import 'package:rijks_museum_demo_app/domain/mappers/art_object_label_domain_model_mapper.dart';
+import 'package:rijks_museum_demo_app/data/mappers/art_object_label_domain_model_mapper.dart';
 
 class _MockArtObjectLabelDataModel extends Mock
     implements ArtObjectLabelDataModel {}

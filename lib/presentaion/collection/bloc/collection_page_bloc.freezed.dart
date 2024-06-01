@@ -23,7 +23,7 @@ mixin _$CollectionPageState {
     required TResult Function() pageLoading,
     required TResult Function() error,
     required TResult Function() nextPageLoadError,
-    required TResult Function(List<CollectionArtObjectDomainModel> artObjects)
+    required TResult Function(List<CollectionArtObjectStateModel> artObjects)
         success,
   }) =>
       throw _privateConstructorUsedError;
@@ -34,7 +34,7 @@ mixin _$CollectionPageState {
     TResult? Function()? pageLoading,
     TResult? Function()? error,
     TResult? Function()? nextPageLoadError,
-    TResult? Function(List<CollectionArtObjectDomainModel> artObjects)? success,
+    TResult? Function(List<CollectionArtObjectStateModel> artObjects)? success,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -44,7 +44,7 @@ mixin _$CollectionPageState {
     TResult Function()? pageLoading,
     TResult Function()? error,
     TResult Function()? nextPageLoadError,
-    TResult Function(List<CollectionArtObjectDomainModel> artObjects)? success,
+    TResult Function(List<CollectionArtObjectStateModel> artObjects)? success,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -148,7 +148,7 @@ class _$CollectionPageInitialState implements CollectionPageInitialState {
     required TResult Function() pageLoading,
     required TResult Function() error,
     required TResult Function() nextPageLoadError,
-    required TResult Function(List<CollectionArtObjectDomainModel> artObjects)
+    required TResult Function(List<CollectionArtObjectStateModel> artObjects)
         success,
   }) {
     return initial();
@@ -162,7 +162,7 @@ class _$CollectionPageInitialState implements CollectionPageInitialState {
     TResult? Function()? pageLoading,
     TResult? Function()? error,
     TResult? Function()? nextPageLoadError,
-    TResult? Function(List<CollectionArtObjectDomainModel> artObjects)? success,
+    TResult? Function(List<CollectionArtObjectStateModel> artObjects)? success,
   }) {
     return initial?.call();
   }
@@ -175,7 +175,7 @@ class _$CollectionPageInitialState implements CollectionPageInitialState {
     TResult Function()? pageLoading,
     TResult Function()? error,
     TResult Function()? nextPageLoadError,
-    TResult Function(List<CollectionArtObjectDomainModel> artObjects)? success,
+    TResult Function(List<CollectionArtObjectStateModel> artObjects)? success,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -277,7 +277,7 @@ class _$CollectionLoadingState implements CollectionLoadingState {
     required TResult Function() pageLoading,
     required TResult Function() error,
     required TResult Function() nextPageLoadError,
-    required TResult Function(List<CollectionArtObjectDomainModel> artObjects)
+    required TResult Function(List<CollectionArtObjectStateModel> artObjects)
         success,
   }) {
     return loading();
@@ -291,7 +291,7 @@ class _$CollectionLoadingState implements CollectionLoadingState {
     TResult? Function()? pageLoading,
     TResult? Function()? error,
     TResult? Function()? nextPageLoadError,
-    TResult? Function(List<CollectionArtObjectDomainModel> artObjects)? success,
+    TResult? Function(List<CollectionArtObjectStateModel> artObjects)? success,
   }) {
     return loading?.call();
   }
@@ -304,7 +304,7 @@ class _$CollectionLoadingState implements CollectionLoadingState {
     TResult Function()? pageLoading,
     TResult Function()? error,
     TResult Function()? nextPageLoadError,
-    TResult Function(List<CollectionArtObjectDomainModel> artObjects)? success,
+    TResult Function(List<CollectionArtObjectStateModel> artObjects)? success,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -410,7 +410,7 @@ class _$CollectionPageLoadingState implements CollectionPageLoadingState {
     required TResult Function() pageLoading,
     required TResult Function() error,
     required TResult Function() nextPageLoadError,
-    required TResult Function(List<CollectionArtObjectDomainModel> artObjects)
+    required TResult Function(List<CollectionArtObjectStateModel> artObjects)
         success,
   }) {
     return pageLoading();
@@ -424,7 +424,7 @@ class _$CollectionPageLoadingState implements CollectionPageLoadingState {
     TResult? Function()? pageLoading,
     TResult? Function()? error,
     TResult? Function()? nextPageLoadError,
-    TResult? Function(List<CollectionArtObjectDomainModel> artObjects)? success,
+    TResult? Function(List<CollectionArtObjectStateModel> artObjects)? success,
   }) {
     return pageLoading?.call();
   }
@@ -437,7 +437,7 @@ class _$CollectionPageLoadingState implements CollectionPageLoadingState {
     TResult Function()? pageLoading,
     TResult Function()? error,
     TResult Function()? nextPageLoadError,
-    TResult Function(List<CollectionArtObjectDomainModel> artObjects)? success,
+    TResult Function(List<CollectionArtObjectStateModel> artObjects)? success,
     required TResult orElse(),
   }) {
     if (pageLoading != null) {
@@ -540,7 +540,7 @@ class _$CollectionPageErrorState implements CollectionPageErrorState {
     required TResult Function() pageLoading,
     required TResult Function() error,
     required TResult Function() nextPageLoadError,
-    required TResult Function(List<CollectionArtObjectDomainModel> artObjects)
+    required TResult Function(List<CollectionArtObjectStateModel> artObjects)
         success,
   }) {
     return error();
@@ -554,7 +554,7 @@ class _$CollectionPageErrorState implements CollectionPageErrorState {
     TResult? Function()? pageLoading,
     TResult? Function()? error,
     TResult? Function()? nextPageLoadError,
-    TResult? Function(List<CollectionArtObjectDomainModel> artObjects)? success,
+    TResult? Function(List<CollectionArtObjectStateModel> artObjects)? success,
   }) {
     return error?.call();
   }
@@ -567,7 +567,7 @@ class _$CollectionPageErrorState implements CollectionPageErrorState {
     TResult Function()? pageLoading,
     TResult Function()? error,
     TResult Function()? nextPageLoadError,
-    TResult Function(List<CollectionArtObjectDomainModel> artObjects)? success,
+    TResult Function(List<CollectionArtObjectStateModel> artObjects)? success,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -674,7 +674,7 @@ class _$CollectionNextPageLoadErrorState
     required TResult Function() pageLoading,
     required TResult Function() error,
     required TResult Function() nextPageLoadError,
-    required TResult Function(List<CollectionArtObjectDomainModel> artObjects)
+    required TResult Function(List<CollectionArtObjectStateModel> artObjects)
         success,
   }) {
     return nextPageLoadError();
@@ -688,7 +688,7 @@ class _$CollectionNextPageLoadErrorState
     TResult? Function()? pageLoading,
     TResult? Function()? error,
     TResult? Function()? nextPageLoadError,
-    TResult? Function(List<CollectionArtObjectDomainModel> artObjects)? success,
+    TResult? Function(List<CollectionArtObjectStateModel> artObjects)? success,
   }) {
     return nextPageLoadError?.call();
   }
@@ -701,7 +701,7 @@ class _$CollectionNextPageLoadErrorState
     TResult Function()? pageLoading,
     TResult Function()? error,
     TResult Function()? nextPageLoadError,
-    TResult Function(List<CollectionArtObjectDomainModel> artObjects)? success,
+    TResult Function(List<CollectionArtObjectStateModel> artObjects)? success,
     required TResult orElse(),
   }) {
     if (nextPageLoadError != null) {
@@ -768,7 +768,7 @@ abstract class _$$CollectionPageSuccessStateCopyWith<$Res> {
           $Res Function(_$CollectionPageSuccessState) then) =
       __$$CollectionPageSuccessStateCopyWithImpl<$Res>;
   @useResult
-  $Res call({List<CollectionArtObjectDomainModel> artObjects});
+  $Res call({List<CollectionArtObjectStateModel> artObjects});
 }
 
 /// @nodoc
@@ -790,7 +790,7 @@ class __$$CollectionPageSuccessStateCopyWithImpl<$Res>
       null == artObjects
           ? _value._artObjects
           : artObjects // ignore: cast_nullable_to_non_nullable
-              as List<CollectionArtObjectDomainModel>,
+              as List<CollectionArtObjectStateModel>,
     ));
   }
 }
@@ -799,12 +799,12 @@ class __$$CollectionPageSuccessStateCopyWithImpl<$Res>
 
 class _$CollectionPageSuccessState implements CollectionPageSuccessState {
   const _$CollectionPageSuccessState(
-      final List<CollectionArtObjectDomainModel> artObjects)
+      final List<CollectionArtObjectStateModel> artObjects)
       : _artObjects = artObjects;
 
-  final List<CollectionArtObjectDomainModel> _artObjects;
+  final List<CollectionArtObjectStateModel> _artObjects;
   @override
-  List<CollectionArtObjectDomainModel> get artObjects {
+  List<CollectionArtObjectStateModel> get artObjects {
     if (_artObjects is EqualUnmodifiableListView) return _artObjects;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_artObjects);
@@ -843,7 +843,7 @@ class _$CollectionPageSuccessState implements CollectionPageSuccessState {
     required TResult Function() pageLoading,
     required TResult Function() error,
     required TResult Function() nextPageLoadError,
-    required TResult Function(List<CollectionArtObjectDomainModel> artObjects)
+    required TResult Function(List<CollectionArtObjectStateModel> artObjects)
         success,
   }) {
     return success(artObjects);
@@ -857,7 +857,7 @@ class _$CollectionPageSuccessState implements CollectionPageSuccessState {
     TResult? Function()? pageLoading,
     TResult? Function()? error,
     TResult? Function()? nextPageLoadError,
-    TResult? Function(List<CollectionArtObjectDomainModel> artObjects)? success,
+    TResult? Function(List<CollectionArtObjectStateModel> artObjects)? success,
   }) {
     return success?.call(artObjects);
   }
@@ -870,7 +870,7 @@ class _$CollectionPageSuccessState implements CollectionPageSuccessState {
     TResult Function()? pageLoading,
     TResult Function()? error,
     TResult Function()? nextPageLoadError,
-    TResult Function(List<CollectionArtObjectDomainModel> artObjects)? success,
+    TResult Function(List<CollectionArtObjectStateModel> artObjects)? success,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -927,10 +927,10 @@ class _$CollectionPageSuccessState implements CollectionPageSuccessState {
 
 abstract class CollectionPageSuccessState implements CollectionPageState {
   const factory CollectionPageSuccessState(
-          final List<CollectionArtObjectDomainModel> artObjects) =
+          final List<CollectionArtObjectStateModel> artObjects) =
       _$CollectionPageSuccessState;
 
-  List<CollectionArtObjectDomainModel> get artObjects;
+  List<CollectionArtObjectStateModel> get artObjects;
   @JsonKey(ignore: true)
   _$$CollectionPageSuccessStateCopyWith<_$CollectionPageSuccessState>
       get copyWith => throw _privateConstructorUsedError;

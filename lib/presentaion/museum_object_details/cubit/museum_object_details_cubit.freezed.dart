@@ -21,7 +21,7 @@ mixin _$MuseumObjectDetailsState {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function() error,
-    required TResult Function(ArtObjectDomainModel artObject) success,
+    required TResult Function(ArtObjectStateModel artObject) success,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -29,7 +29,7 @@ mixin _$MuseumObjectDetailsState {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function()? error,
-    TResult? Function(ArtObjectDomainModel artObject)? success,
+    TResult? Function(ArtObjectStateModel artObject)? success,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -37,7 +37,7 @@ mixin _$MuseumObjectDetailsState {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function()? error,
-    TResult Function(ArtObjectDomainModel artObject)? success,
+    TResult Function(ArtObjectStateModel artObject)? success,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -133,7 +133,7 @@ class _$MuseumObjectDetailsInitialState
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function() error,
-    required TResult Function(ArtObjectDomainModel artObject) success,
+    required TResult Function(ArtObjectStateModel artObject) success,
   }) {
     return initial();
   }
@@ -144,7 +144,7 @@ class _$MuseumObjectDetailsInitialState
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function()? error,
-    TResult? Function(ArtObjectDomainModel artObject)? success,
+    TResult? Function(ArtObjectStateModel artObject)? success,
   }) {
     return initial?.call();
   }
@@ -155,7 +155,7 @@ class _$MuseumObjectDetailsInitialState
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function()? error,
-    TResult Function(ArtObjectDomainModel artObject)? success,
+    TResult Function(ArtObjectStateModel artObject)? success,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -254,7 +254,7 @@ class _$MuseumObjectDetailsLoadingState
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function() error,
-    required TResult Function(ArtObjectDomainModel artObject) success,
+    required TResult Function(ArtObjectStateModel artObject) success,
   }) {
     return loading();
   }
@@ -265,7 +265,7 @@ class _$MuseumObjectDetailsLoadingState
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function()? error,
-    TResult? Function(ArtObjectDomainModel artObject)? success,
+    TResult? Function(ArtObjectStateModel artObject)? success,
   }) {
     return loading?.call();
   }
@@ -276,7 +276,7 @@ class _$MuseumObjectDetailsLoadingState
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function()? error,
-    TResult Function(ArtObjectDomainModel artObject)? success,
+    TResult Function(ArtObjectStateModel artObject)? success,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -374,7 +374,7 @@ class _$MuseumObjectDetailsErrorState implements MuseumObjectDetailsErrorState {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function() error,
-    required TResult Function(ArtObjectDomainModel artObject) success,
+    required TResult Function(ArtObjectStateModel artObject) success,
   }) {
     return error();
   }
@@ -385,7 +385,7 @@ class _$MuseumObjectDetailsErrorState implements MuseumObjectDetailsErrorState {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function()? error,
-    TResult? Function(ArtObjectDomainModel artObject)? success,
+    TResult? Function(ArtObjectStateModel artObject)? success,
   }) {
     return error?.call();
   }
@@ -396,7 +396,7 @@ class _$MuseumObjectDetailsErrorState implements MuseumObjectDetailsErrorState {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function()? error,
-    TResult Function(ArtObjectDomainModel artObject)? success,
+    TResult Function(ArtObjectStateModel artObject)? success,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -456,9 +456,7 @@ abstract class _$$MuseumObjectDetailsSuccessStateCopyWith<$Res> {
           $Res Function(_$MuseumObjectDetailsSuccessState) then) =
       __$$MuseumObjectDetailsSuccessStateCopyWithImpl<$Res>;
   @useResult
-  $Res call({ArtObjectDomainModel artObject});
-
-  $ArtObjectDomainModelCopyWith<$Res> get artObject;
+  $Res call({ArtObjectStateModel artObject});
 }
 
 /// @nodoc
@@ -474,22 +472,14 @@ class __$$MuseumObjectDetailsSuccessStateCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? artObject = null,
+    Object? artObject = freezed,
   }) {
     return _then(_$MuseumObjectDetailsSuccessState(
-      null == artObject
+      freezed == artObject
           ? _value.artObject
           : artObject // ignore: cast_nullable_to_non_nullable
-              as ArtObjectDomainModel,
+              as ArtObjectStateModel,
     ));
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $ArtObjectDomainModelCopyWith<$Res> get artObject {
-    return $ArtObjectDomainModelCopyWith<$Res>(_value.artObject, (value) {
-      return _then(_value.copyWith(artObject: value));
-    });
   }
 }
 
@@ -500,7 +490,7 @@ class _$MuseumObjectDetailsSuccessState
   const _$MuseumObjectDetailsSuccessState(this.artObject);
 
   @override
-  final ArtObjectDomainModel artObject;
+  final ArtObjectStateModel artObject;
 
   @override
   String toString() {
@@ -512,12 +502,12 @@ class _$MuseumObjectDetailsSuccessState
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MuseumObjectDetailsSuccessState &&
-            (identical(other.artObject, artObject) ||
-                other.artObject == artObject));
+            const DeepCollectionEquality().equals(other.artObject, artObject));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, artObject);
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(artObject));
 
   @JsonKey(ignore: true)
   @override
@@ -532,7 +522,7 @@ class _$MuseumObjectDetailsSuccessState
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function() error,
-    required TResult Function(ArtObjectDomainModel artObject) success,
+    required TResult Function(ArtObjectStateModel artObject) success,
   }) {
     return success(artObject);
   }
@@ -543,7 +533,7 @@ class _$MuseumObjectDetailsSuccessState
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function()? error,
-    TResult? Function(ArtObjectDomainModel artObject)? success,
+    TResult? Function(ArtObjectStateModel artObject)? success,
   }) {
     return success?.call(artObject);
   }
@@ -554,7 +544,7 @@ class _$MuseumObjectDetailsSuccessState
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function()? error,
-    TResult Function(ArtObjectDomainModel artObject)? success,
+    TResult Function(ArtObjectStateModel artObject)? success,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -604,9 +594,9 @@ class _$MuseumObjectDetailsSuccessState
 abstract class MuseumObjectDetailsSuccessState
     implements MuseumObjectDetailsState {
   const factory MuseumObjectDetailsSuccessState(
-      final ArtObjectDomainModel artObject) = _$MuseumObjectDetailsSuccessState;
+      final ArtObjectStateModel artObject) = _$MuseumObjectDetailsSuccessState;
 
-  ArtObjectDomainModel get artObject;
+  ArtObjectStateModel get artObject;
   @JsonKey(ignore: true)
   _$$MuseumObjectDetailsSuccessStateCopyWith<_$MuseumObjectDetailsSuccessState>
       get copyWith => throw _privateConstructorUsedError;

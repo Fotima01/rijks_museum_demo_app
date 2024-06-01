@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
+import 'package:rijks_museum_demo_app/application/di/dependency_injector.dart';
+import 'package:rijks_museum_demo_app/application/route/navigation_service.dart';
 import 'package:rijks_museum_demo_app/constants/colors.dart';
 import 'package:rijks_museum_demo_app/constants/routes/routes.dart';
-import 'package:rijks_museum_demo_app/domain/models/museum_collection_domain_model.dart';
 import 'package:rijks_museum_demo_app/presentaion/collection/bloc/collection_page_bloc.dart';
+import 'package:rijks_museum_demo_app/presentaion/collection/models/collection_art_object_state_model.dart';
 import 'package:rijks_museum_demo_app/presentaion/shared/progress_indicator.dart';
 import 'package:rijks_museum_demo_app/presentaion/shared/widgets/app_image.dart';
 
@@ -14,7 +15,7 @@ class CollectionGridView extends StatelessWidget {
     super.key,
   });
 
-  final List<CollectionArtObjectDomainModel> artObjects;
+  final List<CollectionArtObjectStateModel> artObjects;
 
   @override
   Widget build(BuildContext context) {
@@ -63,7 +64,7 @@ class CollectionGridView extends StatelessWidget {
                       children: [
                         AppImage(
                           imageType: ImageType.network,
-                          url: artObject.webImage?.url ?? '',
+                          url: artObject.webImageUrl,
                         ),
                         Container(
                           color: Colors.black.withOpacity(0.3),
@@ -89,9 +90,10 @@ class CollectionGridView extends StatelessWidget {
                                 alignment: Alignment.bottomRight,
                                 child: IconButton(
                                   onPressed: () {
-                                    context.push(
-                                        RouteLocations.museumObjectDetails,
-                                        extra: artObject.objectNumber);
+                                    injector<NavigationService>().naviagateTo(
+                                      RouteLocations.museumObjectDetails,
+                                      extra: artObject.objectNumber,
+                                    );
                                   },
                                   icon: const Icon(
                                     Icons.arrow_circle_right_outlined,

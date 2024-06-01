@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
+import 'package:rijks_museum_demo_app/application/di/dependency_injector.dart';
+import 'package:rijks_museum_demo_app/application/route/navigation_service.dart';
 import 'package:rijks_museum_demo_app/constants/colors.dart';
-import 'package:rijks_museum_demo_app/domain/models/museum_object_domain_model.dart';
 import 'package:rijks_museum_demo_app/presentaion/shared/widgets/app_image.dart';
 
 class MuseumObjectImage extends StatelessWidget {
-  const MuseumObjectImage({required this.artObject, super.key});
+  const MuseumObjectImage({required this.imageUrl, super.key});
 
-  final ArtObjectDomainModel artObject;
+  final String imageUrl;
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class MuseumObjectImage extends StatelessWidget {
         fit: StackFit.expand,
         children: [
           AppImage(
-            url: artObject.webImage?.url ?? '',
+            url: imageUrl,
             imageType: ImageType.network,
             boxFit: BoxFit.fill,
           ),
@@ -29,7 +29,7 @@ class MuseumObjectImage extends StatelessWidget {
             left: 15,
             child: IconButton(
               onPressed: () {
-                context.pop();
+                injector<NavigationService>().popPage();
               },
               icon: const Icon(
                 Icons.arrow_back_ios,

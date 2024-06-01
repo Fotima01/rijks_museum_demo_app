@@ -14,6 +14,6 @@ class CollectionPageState with _$CollectionPageState {
       CollectionNextPageLoadErrorState;
 
   const factory CollectionPageState.success(
-          List<CollectionArtObjectDomainModel> artObjects) =
+          List<CollectionArtObjectStateModel> artObjects) =
       CollectionPageSuccessState;
 }

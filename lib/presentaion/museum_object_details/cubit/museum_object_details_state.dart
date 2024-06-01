@@ -12,5 +12,5 @@ class MuseumObjectDetailsState with _$MuseumObjectDetailsState {
       MuseumObjectDetailsErrorState;
 
   const factory MuseumObjectDetailsState.success(
-      ArtObjectDomainModel artObject) = MuseumObjectDetailsSuccessState;
+      ArtObjectStateModel artObject) = MuseumObjectDetailsSuccessState;
 }

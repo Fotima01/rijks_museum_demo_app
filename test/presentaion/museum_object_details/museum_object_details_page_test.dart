@@ -4,9 +4,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:get_it/get_it.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:rijks_museum_demo_app/domain/models/art_object_image_domain_model.dart';
-import 'package:rijks_museum_demo_app/domain/models/museum_object_domain_model.dart';
 import 'package:rijks_museum_demo_app/presentaion/museum_object_details/cubit/museum_object_details_cubit.dart';
+import 'package:rijks_museum_demo_app/presentaion/museum_object_details/models/art_object_state_model.dart';
 import 'package:rijks_museum_demo_app/presentaion/museum_object_details/museum_object_details_page.dart';
 import 'package:rijks_museum_demo_app/presentaion/shared/error/error_page_content.dart';
 import 'package:rijks_museum_demo_app/presentaion/shared/progress_indicator.dart';
@@ -17,15 +16,13 @@ import '../../test_utils.dart';
 class _MockMuseumObjectDetailsCubit extends Mock
     implements MuseumObjectDetailsCubit {}
 
-class _MockArtObjectImageDomainModel extends Mock
-    implements ArtObjectImageDomainModel {}
-
 const _objectNumber = 'objectNumber';
+const _webImageUrl = 'webImageUrl';
 void main() {
-  final imageDomainModel = _MockArtObjectImageDomainModel();
-
-  final artObject = ArtObjectDomainModel(
-    webImage: imageDomainModel,
+  const artObject = ArtObjectStateModel(
+    id: 'id',
+    objectNumber: _objectNumber,
+    webImageUrl: _webImageUrl,
     longTitle: 'longTitle',
     scLabelLine: 'scLabelLine',
     plaqueDescriptionEnglish: 'plaqueDescriptionEnglish',
@@ -36,7 +33,7 @@ void main() {
 
   const loadingState = MuseumObjectDetailsState.loading();
   const errorState = MuseumObjectDetailsState.error();
-  final successState = MuseumObjectDetailsState.success(artObject);
+  const successState = MuseumObjectDetailsState.success(artObject);
 
   setUpAll(() {
     GetIt.instance.registerFactory<MuseumObjectDetailsCubit>(() => pageBloc);
@@ -47,7 +44,6 @@ void main() {
         .thenAnswer((_) => Stream.fromIterable([errorState]));
     when(() => pageBloc.stream)
         .thenAnswer((_) => Stream.fromIterable([successState]));
-    when(() => imageDomainModel.url).thenReturn('url');
 
     when(() => pageBloc.close()).thenAnswer((_) async {});
     when(() => pageBloc.loadObjectDetails(_objectNumber))

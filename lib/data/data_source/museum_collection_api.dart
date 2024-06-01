@@ -14,10 +14,7 @@ class MuseumCollectionApi {
     required int pageSize,
     String? type,
   }) async {
-    final path = r'/collection?key={apiKey}&p={page}&ps={pageSize}'
-        .replaceAll('{' r'apiKey' '}', _apiKey)
-        .replaceAll('{' r'page' '}', page.toString())
-        .replaceAll('{' r'pageSize' '}', pageSize.toString());
+    final path = '/collection?key=$_apiKey&p=$page&ps=$pageSize';
 
     final response = await _dio.request<Map>(
       path,
@@ -38,9 +35,7 @@ class MuseumCollectionApi {
   Future<MuseumObjectResponseDataModel> getMuseumObject({
     required String objectNumber,
   }) async {
-    final path = r'/collection/{objectNumber}?key={apiKey}'
-        .replaceAll('{' r'objectNumber' '}', objectNumber)
-        .replaceAll('{' r'apiKey' '}', _apiKey);
+    final path = '/collection/$objectNumber?key=$_apiKey';
 
     final response = await _dio.request<Map>(path);
     try {

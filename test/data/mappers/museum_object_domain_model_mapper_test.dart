@@ -1,8 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:rijks_museum_demo_app/data/models/museum_object_response_data_model/museum_object_response_data_model.dart';
-import 'package:rijks_museum_demo_app/domain/mappers/art_object_domain_model_mapper.dart';
-import 'package:rijks_museum_demo_app/domain/mappers/museum_object_domain_model_mapper.dart';
+import 'package:rijks_museum_demo_app/data/mappers/art_object_domain_model_mapper.dart';
+import 'package:rijks_museum_demo_app/data/mappers/museum_object_domain_model_mapper.dart';
 import 'package:rijks_museum_demo_app/domain/models/museum_object_domain_model.dart';
 
 class _MockArtObjectDomainModelMapper extends Mock

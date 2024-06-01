@@ -4,8 +4,8 @@ import 'package:rijks_museum_demo_app/data/data_source/museum_collection_api.dar
 import 'package:rijks_museum_demo_app/data/models/museum_collection_response_data_model/museum_collection_response_data_model.dart';
 import 'package:rijks_museum_demo_app/data/models/museum_object_response_data_model/museum_object_response_data_model.dart';
 import 'package:rijks_museum_demo_app/data/repositories/museum_collection_repo_impl.dart';
-import 'package:rijks_museum_demo_app/domain/mappers/museum_collection_domain_model_mapper.dart';
-import 'package:rijks_museum_demo_app/domain/mappers/museum_object_domain_model_mapper.dart';
+import 'package:rijks_museum_demo_app/data/mappers/museum_collection_domain_model_mapper.dart';
+import 'package:rijks_museum_demo_app/data/mappers/museum_object_domain_model_mapper.dart';
 import 'package:rijks_museum_demo_app/domain/models/museum_collection_domain_model.dart';
 import 'package:rijks_museum_demo_app/domain/models/museum_object_domain_model.dart';
 

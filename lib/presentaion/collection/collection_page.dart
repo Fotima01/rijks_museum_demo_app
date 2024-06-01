@@ -1,19 +1,32 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:rijks_museum_demo_app/application/di/dependency_injector.dart';
 import 'package:rijks_museum_demo_app/presentaion/collection/bloc/collection_page_bloc.dart';
 import 'package:rijks_museum_demo_app/presentaion/collection/widgets/collection_grid_view.dart';
 import 'package:rijks_museum_demo_app/presentaion/shared/error/error_page_content.dart';
 import 'package:rijks_museum_demo_app/presentaion/shared/error/error_snackbar_message.dart';
 import 'package:rijks_museum_demo_app/presentaion/shared/progress_indicator.dart';
 
-class CollectionPage extends StatefulWidget {
+class CollectionPage extends StatelessWidget {
   const CollectionPage({super.key});
 
   @override
-  State<CollectionPage> createState() => _CollectionPageState();
+  Widget build(BuildContext context) {
+    return BlocProvider(
+      create: (context) => injector<CollectionPageBloc>(),
+      child: const CollectionPageContent(),
+    );
+  }
 }
 
-class _CollectionPageState extends State<CollectionPage> {
+class CollectionPageContent extends StatefulWidget {
+  const CollectionPageContent({super.key});
+
+  @override
+  State<CollectionPageContent> createState() => _CollectionPageContentState();
+}
+
+class _CollectionPageContentState extends State<CollectionPageContent> {
   @override
   void initState() {
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
